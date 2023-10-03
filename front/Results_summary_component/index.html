@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="result">
+      <h3 class="result-title">Your Result</h3>
+
+      <div class="result-wrapper">
+        <div class="result-status">
+          <span class="total-result">
+            76
+          </span>
+          <span class="range-result">
+            of 100
+          </span>
+        </div>
+
+        <div class="result-description">
+          <h3>Great</h3>
+
+          <p>You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="summary">
+      <h3 class="summary-title">Summary</h3>
+
+      <ul class="summary-container">
+        <li class="summary-container__item">
+          <div class="hability-wrapper">
+            <img src="./assets/images/icon-reaction.svg" alt="">
+            <span class="hability-wrapper__reaction">Reaction</span>
+          </div>
+
+          <span class="performance">
+            <span class="rate">80</span> / 100
+          </span>
+        </li>
+
+        <li class="summary-container__item">
+          <div class="hability-wrapper">
+            <img src="./assets/images/icon-memory.svg" alt="">
+            <span class="hability-wrapper__memory">Memory</span>
+          </div>
+
+          <span class="performance">
+            <span class="rate">92</span> / 100
+          </span>
+        </li>
+
+        <li class="summary-container__item">
+          <div class="hability-wrapper">
+            <img src="./assets/images/icon-verbal.svg" alt="">
+            <span class="hability-wrapper__verbal">Verbal</span>
+          </div>
+
+          <span class="performance">
+            <span class="rate">61</span> / 100
+          </span>
+        </li>
+
+        <li class="summary-container__item">
+          <div class="hability-wrapper">
+            <img src="./assets/images/icon-visual.svg" alt="">
+            <span class="hability-wrapper__visual">Visual</span>
+          </div>
+
+          <span class="performance">
+            <span class="rate">72</span> / 100
+          </span>
+        </li>
+      </ul>
+
+      <button type="button" class="continue-button">
+        Continue
+      </button>
+    </div>
+
+
+  </div>
+  
+  
+</body>
+</html>
