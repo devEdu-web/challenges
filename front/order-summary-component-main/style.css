@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturaded-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.app, .info_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  gap: 48px;
+  width: min-content;
+  background-color: white;
+  text-align: center;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+
+.info_container {
+  width: 70%;
+  gap: 48px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summary__title {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.summary_description {
+  color: var(--dark-blue);
+  opacity: .8;
+}
+
+.plan, .plan-description, .plan-description__wrapper {
+  display: flex;
+}
+
+.plan {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 8px;
+}
+
+.plan-description {
+  align-items: center;
+  gap: 16px;
+}
+
+.plan-description__wrapper {
+  flex-direction: column;
+}
+
+.plan-description__name {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.plan-description__price {
+  color: var(--desaturaded-blue);
+}
+
+.change-plan-cta {
+  color: var(--bright-blue);
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+.change-plan-cta:hover {
+  text-decoration: none;
+  opacity: .8;
+}
+
+.plan-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.payment__cta {
+  background-color: var(--bright-blue);
+  text-decoration: none;
+  padding: 12px 32px;
+  border-radius: 10px;
+  font-size: .9em;
+  font-weight: 700;
+  color: white;
+  width: 100%;
+}
+
+.payment__cta:hover {
+  background-color: var(--bright-blue);
+  opacity: .8;
+}
+
+.cancel__cta {
+  text-decoration: none;
+  color: var(--desaturaded-blue);
+  font-weight: 700;
+
+  margin-bottom: 48px;
+}
+
+.cancel__cta:hover {
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 475px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+
+  .app {
+    width: 80%;
+  }
+}
