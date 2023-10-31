@@ -1,6 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --violet: hsl(257, 40%, 49%);
   --soft-magenta: hsl(300, 69%, 71%);
+  
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  background-color: var(--violet);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+
+.main-header {
+  align-self: flex-start;
+  margin-bottom: 10rem;
+}
+
+.container {
+  display: flex;
+  gap: 5rem;
+
+  width: 100%;
+  max-width: 125rem;
+  
+  color: white;
+}
+
+.container__illustration {
+  width: 50%;
+}
+
+.container__content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+
+.container__content__title {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+}
+
+.container__content__desc {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  padding-bottom: 2rem;
+  opacity: .70;
+}
+
+.btn {
+  background-color: white;
+  color: var(--violet);
+  padding: 1.2rem 6rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 4rem;
+  width: fit-content;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.4s;
+}
+
+.btn:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+  cursor: pointer;
+}
+
+.container__content__cta {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.icon-holder {
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 100px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.icon-holder:hover {
+  color: var(--soft-magenta);
+  border: 1px solid var(--soft-magenta);
+  cursor: pointer;
+}
+
+.fa-brands {
+  font-size: 2rem;
+  color: inherit;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(./images/bg-mobile.svg);
+    background-position: top;
+    background-size: contain;
+  }
+
+  .app {
+    padding: 2rem 0;
+  }
+
+  .main-header {
+    margin-bottom: 5rem;
+  }
+
+  .container {
+    margin-bottom: 8rem;
+  }
+
+  .container__illustration {
+    width: 80%;
+  }
+
+  .container__content{
+    text-align: center;
+    align-items: center;
+  }
+
+  footer {
+    justify-content: center;
+  }
 }
